@@ -119,6 +119,12 @@ wasm-pack build --target web --out-name wasm --out-dir ./static
 
 Then, use your favorite web server to server the files under `./static`. For example:
 
+Install if necessary, the nightly toolchain for running the miniserve.
+```bash
+rustup toolchain install nightly
+```
+Then run the miniserve
+
 ```bash
 cargo +nightly install miniserve
 miniserve ./static --index index.html
